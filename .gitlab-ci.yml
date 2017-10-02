@@ -1,0 +1,13 @@
+image: rust
+
+cache:
+  paths:
+    - target/
+    - cargo/
+
+cargo:
+  script:
+    - cargo build --verbose; cargo test --verbose
+
+variables:
+  CARGO_HOME: $CI_PROJECT_DIR/cargo
